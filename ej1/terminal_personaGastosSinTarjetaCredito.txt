@@ -1,0 +1,9 @@
+cd
+/home/dani/personaGastosSinTarjetaCredito.py
+start-yarn.sh
+start-dfs.sh
+spark-submit --master yarn personaGastosSinTarjetaCredito.py
+hdfs dfs -ls /user/dani/output/personaGastosSinTarjetaCredito
+hdfs dfs -cat /user/dani/output/personaGastosSinTarjetaCredito/part-00000
+hdfs dfs -get /user/dani/output/personaGastosSinTarjetaCredito /home/dani/resultados
+
