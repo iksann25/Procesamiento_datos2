@@ -1,0 +1,9 @@
+cd
+/home/dani/categoriaDeVideoMasVista.py
+start-yarn.sh
+start-dfs.sh
+spark-submit --master yarn categoriaDeVideoMasVista.py
+hdfs dfs -ls /user/dani/output/categoriaDeVideoMasVista
+hdfs dfs -cat /user/dani/output/categoriaDeVideoMasVista/part-00000
+hdfs dfs -get /user/dani/output/categoriaDeVideoMasVista /home/dani/resultados2
+
