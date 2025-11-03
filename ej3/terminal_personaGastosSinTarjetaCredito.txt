@@ -1,0 +1,11 @@
+cd
+/home/dani/personaYMetodosDePago.py
+start-yarn.sh
+start-dfs.sh
+spark-submit --master yarn personaYMetodosDePago.py
+hdfs dfs -ls /user/dani/personaYMetodosDePago
+dfs dfs -cat /user/dani/comprasConTDCMenoroIgualDe1500 /home/dani/comprasConTDCMenoroIgualDe1500/part-00000
+hdfs dfs -cat /user/dani/comprasConTDCMayorDe1500 /home/dani/comprasConTDCMayorDe1500/part-00000
+dfs dfs -get /user/dani/comprasConTDCMenoroIgualDe1500 /home/dani/comprasConTDCMenoroIgualDe1500
+hdfs dfs -get /user/dani/comprasConTDCMayorDe1500 /home/dani/comprasConTDCMayorDe1500
+
